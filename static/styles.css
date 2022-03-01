@@ -1,0 +1,50 @@
+body {
+  margin: 20px auto;
+}
+
+.page {
+  font-size: 16px;
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+form {
+  font-size: 16px;
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+ul {
+  margin: 30px auto;
+}
+
+li {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.right-float {
+  float: right;
+}
+
+.user-profile {
+  margin: 30px auto;
+  padding: 12px 0;
+  max-width: 720px;
+}
+
+.profile-info {
+  padding-top: 10px;
+}
+
+.user-image {
+  height: 150px;
+  width: 150px;
+  object-fit:cover;
+  border-radius: 50%;
+  margin: auto !important;
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block page %}
+
+  <div class="row user-profile">
+    <div class="col-4">
+      <img class="user-image" src="{{user.image_url}}"/>
+    </div>
+    <div class="col-8 profile-info">
+      <h1 class="title"> {{user.get_full_name()}} <h1>
+
+      <form>
+        <button class="btn btn-primary" formaction="/users/{{user.id}}/edit" formmethod="GET"> Edit </button>
+        <button class="btn btn-danger" formaction="/users/{{user.id}}/delete" formmethod="POST"> Delete </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
