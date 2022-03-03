@@ -27,6 +27,23 @@ a {
 }
 
 
+.post {
+  margin-top: 60px;
+}
+
+
+.post-content {
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+.post-by {
+  font-size: 14px;
+  margin: 32px 0;
+  font-style: italic;
+}
+
+
 .right-float {
   float: right;
 }

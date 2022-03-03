@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block page %}
+
+  <div class="page">
+    <h1 class="title"> {{post.title}} <h1>
+    <p class="post-content"> {{post.content}} </p>
+    <p class="post-by"> by {{post.user.full_name}}
+
+    <form>
+      <a class="btn btn-outline-primary" href="/users/{{post.user.id}}"> Back to Profile </a>
+      <button class="btn btn-primary" formaction="/posts/{{post.id}}/edit" formmethod="GET"> Edit </button>
+      <button class="btn btn-danger" formaction="/posts/{{post.id}}/delete" formmethod="POST"> Delete </button>
+    </form>
+  </div>
+
+{% endblock %}

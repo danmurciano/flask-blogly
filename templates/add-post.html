@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block page %}
+
+  <div class="page">
+    <h1 class="title"> Add Post for {{user.full_name}} <h1>
+
+    <form action="/users/{{user.id}}/posts/new" method="POST">
+      <div class="mb-3">
+        <label class="form-label"> Title </label>
+        <input class="form-control" name="title"> </input>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"> Content </label>
+        <textarea class="form-control" name="content" rows=8> </textarea>
+      </div>
+      <div class="right-float">
+        <a class="btn btn-outline-info" href="/users/{{user.id}}"> Cancel </a>
+        <button class="btn btn-success"> Add </button>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}
