@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from app import app
-from models import db, User
+from models import db, User, Post, Tag
 
 # Use test database and don't clutter tests with SQL
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///blogly_test'
@@ -26,7 +26,7 @@ class UserModelTestCase(TestCase):
         db.session.rollback()
 
 
-    def test_get_full_name(self):
+    def test_add_user(self):
         user = User(first_name="Test", last_name="Denson", image_url="/static/images/user.png")
-        self.assertEquals(user.get_full_name(), "Test Denson")
+        self.assertEquals(user.full_name, "Test Denson")
         self.assertEquals(user.image_url, "/static/images/user.png")

@@ -7,11 +7,22 @@
     <form action="/posts/{{post.id}}/edit" method="POST">
       <div class="mb-3">
         <label class="form-label"> Title </label>
-        <input class="form-control" name="title"value="{{post.title}}"> </input>
+        <input class="form-control" name="title" value="{{post.title}}"> </input>
       </div>
       <div class="mb-3">
         <label class="form-label"> Content </label>
-        <textarea class="form-control" name="content" rows=8 value=> {{post.content}} </textarea>
+        <textarea class="form-control" name="content" rows=8> {{post.content}} </textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"> Tags </label>
+        <div class="tags-div">
+          {% for tag in tags %}
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="{{tag.id}}" id="tag{{tag.id}}" name="tags">
+              <label class="form-check-label tag-label" for="tag{{tag.id}}"> {{tag.name}} </label>
+            </div>
+          {% endfor %}
+        </div>
       </div>
       <div class="right-float">
         <a class="btn btn-outline-info" href="/users/{{post.user.id}}"> Cancel </a>
